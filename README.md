@@ -1,8 +1,6 @@
 # ⌈ abdulwahab ⌋ Profile
 
-مشروع تجريبي بسيط لبروفايل شخصي، يضم توقيت مباشر وعداد زيارات وروابط تواصل.
-
-A simple experimental personal profile page with, live clocks, and social links.
+.مشروع تجريبي بسيط لبروفايل شخصي
 
 ---
 

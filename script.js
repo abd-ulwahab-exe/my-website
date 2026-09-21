@@ -22,7 +22,7 @@ function updateClocks() {
 updateClocks();
 setInterval(updateClocks, 1000);
 
-// 2. تفعيل زر اللغة
+
 const langBtn = document.getElementById('lang-toggle');
 let currentLang = 'en';
 
@@ -45,7 +45,7 @@ langBtn.addEventListener('click', () => {
   });
 });
 
-// 3. عداد الزيارات المحلي
+
 function initVisitorCounter() {
   let visits = localStorage.getItem('abdulwahab_visits') || 0;
   visits = parseInt(visits) + 1;
@@ -55,7 +55,6 @@ function initVisitorCounter() {
 
 initVisitorCounter();
 
-// 4. نسخ حساب الديسكورد عند الضغط على الأيقونة
 const discordBtn = document.getElementById('copy-discord');
 const toast = document.getElementById('toast');
 
@@ -70,7 +69,7 @@ discordBtn.addEventListener('click', () => {
 
 
 
-// --- 3. Lanyard API Integration ---
+
 const DISCORD_ID = "1395288519735378043";
 
 async function updateLanyard() {
@@ -82,17 +81,14 @@ async function updateLanyard() {
 
     const data = json.data;
 
-    // 1. تحديث نقطة الحالة (online, idle, dnd, offline)
+
     const statusDot = document.querySelector('.status-dot');
     if (statusDot) {
       statusDot.className = `status-dot ${data.discord_status}`;
     }
 
-    // 2. تحديث نص وشكل شارة الحالة
-    // 2. تحديث نص وشكل شارة الحالة تلقائياً
     const statusBadge = document.querySelector('.status-badge');
     if (statusBadge) {
-      // نحدد كلاس الشارة ليتغير لونها في CSS
       statusBadge.className = `status-badge ${data.discord_status}`;
 
       switch (data.discord_status) {
@@ -119,7 +115,7 @@ async function updateLanyard() {
           break;
       }
     }
-    // 3. نشاط Spotify
+  
     const spotifyBox = document.getElementById('spotify-activity') || document.getElementById('Spotify-activity');
     if (spotifyBox) {
       if (data.listening_to_spotify && data.spotify) {
@@ -134,11 +130,10 @@ async function updateLanyard() {
   }
 }
 
-// تشغيل الدالة فوراً والتكرار كل 6 ثوانٍ
-updateLanyard();
+
 setInterval(updateLanyard, 6000);
 
-//
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
