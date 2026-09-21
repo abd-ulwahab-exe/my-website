@@ -389,3 +389,125 @@ body {
   color: #80848e;
   background: rgba(128, 132, 142, 0.1);
 }
+
+
+/* 1. السكرول السلس للصفحة */
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 100px;
+}
+
+/* 2. حاوية الأقسام */
+.content-sections {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* 3. شكل الأقسام وتأثير الإضاءة القوية والتكبر */
+.site-section {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  overflow: hidden;
+  
+  /* ظلال ناعمة خفيفة في الوضع العادي */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  
+  /* انتقالات سلسة ومريحة جداً */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease,
+              background 0.4s ease;
+
+  /* سلاسة الظهور حركة الانسياب عند التمرير */
+  animation: smoothAppear linear both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 30%;
+}
+
+/* 4. زيادة الإضاءة القوية (Glow) والبريق عند وضع الماوس (Hover) */
+.site-section:hover {
+  transform: translateY(-8px) scale(1.03); /* تكبير بارز وارتفاع للأعلى */
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(88, 101, 242, 0.9); /* حدود بوهج أزرق قاطع */
+  
+  /* ظلال وإضاءة منتشرة وقوية جداً حول الكارت */
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.5),
+              0 15px 35px rgba(88, 101, 242, 0.3),
+              inset 0 0 15px rgba(88, 101, 242, 0.15);
+}
+
+/* 5. حركة الظهور الانسيابية القوية جداً عند النزول بالسكرول */
+@keyframes smoothAppear {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+    filter: blur(8px); /* ضبابية خفيفة في البداية تزيد من إحساس السلاسة */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* عناوين الأقسام */
+.site-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #5865f2;
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px rgba(88, 101, 242, 0.4); /* توهج للعناوين */
+}
+
+/* قائمة ساعات العمل */
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  color: #b9bbbe;
+}
+
+.hours-list li span {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* كارت التواصل عبر الديسكورد */
+.discord-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(88, 101, 242, 0.2);
+  border: 1px solid rgba(88, 101, 242, 0.6);
+  padding: 12px 22px;
+  border-radius: 14px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.2);
+}
+
+.discord-contact i {
+  color: #5865f2;
+  font-size: 1.5rem;
+}
