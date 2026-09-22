@@ -500,3 +500,49 @@ html {
   color: #5865f2;
   font-size: 1.5rem;
 }
+ 
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .banner img {
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav, .navbar {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .navbar-extra, .time-display, .views-count {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
