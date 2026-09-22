@@ -22,7 +22,6 @@ function updateClocks() {
 updateClocks();
 setInterval(updateClocks, 1000);
 
-
 const langBtn = document.getElementById('lang-toggle');
 let currentLang = 'en';
 
@@ -45,7 +44,6 @@ langBtn.addEventListener('click', () => {
   });
 });
 
-
 function initVisitorCounter() {
   let visits = localStorage.getItem('abdulwahab_visits') || 0;
   visits = parseInt(visits) + 1;
@@ -67,9 +65,6 @@ discordBtn.addEventListener('click', () => {
   });
 });
 
-
-
-
 const DISCORD_ID = "1395288519735378043";
 
 async function updateLanyard() {
@@ -80,7 +75,6 @@ async function updateLanyard() {
     if (!json.success) return;
 
     const data = json.data;
-
 
     const statusDot = document.querySelector('.status-dot');
     if (statusDot) {
@@ -130,9 +124,7 @@ async function updateLanyard() {
   }
 }
 
-
 setInterval(updateLanyard, 6000);
-
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
