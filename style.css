@@ -546,3 +546,31 @@ html {
     padding: 4px 8px;
   }
 }
+
+.worked-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tag-item {
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  display: inline-block;
+}
+
+.tag-item:hover {
+  transform: translateY(-4px);
+  background: rgba(88, 101, 242, 0.2);
+  border-color: #5865f2; 
+  box-shadow: 0 6px 15px rgba(88, 101, 242, 0.25);
+  color: #ffffff;
+}
