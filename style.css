@@ -530,12 +530,10 @@ html {
     flex-wrap: wrap;
     justify-content: center;
   }
-}
 
-@media (max-width: 768px) {
   nav, .navbar {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     padding: 10px;
@@ -543,9 +541,10 @@ html {
 
   .navbar-extra, .time-display, .views-count {
     font-size: 12px;
-    padding: 4px 8px;
+    padding: 4px 0px;
   }
 }
+
 
 .worked-tags {
   display: flex;
