@@ -40,7 +40,7 @@ langBtn.addEventListener('click', () => {
 
   const translatableElements = document.querySelectorAll('[data-en]');
   translatableElements.forEach(el => {
-    el.textContent = el.getAttribute(`data-${currentLang}`);
+el.innerHTML = el.getAttribute(`data-${currentLang}`);
   });
 });
 
